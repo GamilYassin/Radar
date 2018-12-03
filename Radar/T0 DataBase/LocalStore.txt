@@ -1,0 +1,4 @@
+﻿<1>
+Insert Table SQL Statment
+
+Throw New NotImplementedException()

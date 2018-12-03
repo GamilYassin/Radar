@@ -1,0 +1,19 @@
+﻿Project Name: Radar
+Operations Portfolio Managment System (OPMS)
+
+Objective:
+	Create a portfolio managment system for operations that supports the following features:
+	1- Opportunities Tracker
+		- Add opportunity info (account, contacts, status, amount, products)
+	2- Forecast
+	3- Project Database
+	4- KPI tracker
+	5- Customer Database
+	6- Dashboard
+
+
+
+
+
+
+

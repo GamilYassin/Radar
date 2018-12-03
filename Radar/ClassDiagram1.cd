@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Radar.Radar.ProjectsTable">
+    <Position X="5.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>T2 Logic\Projects\ProjectsTable.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Radar.Radar.TableHandler">
+    <Position X="1.5" Y="0.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>EAAARAgAAAImAAAACYAAAhUAAAAAAgAAAYIgQAAQBAA=</HashCode>
+      <FileName>T1 DB Managers\TableHandler.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Radar.Radar.SqlGenerator">
+    <Position X="6.25" Y="8.25" Width="3" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Radar.Radar.SqlGenerator.SQLDataTypesEnum">
+        <TypeIdentifier>
+          <NewMemberFileName>T1 DB Managers\SqlGenerator.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAACAFgBADQEEBAAACCACJAABAAAAACAA=</HashCode>
+      <FileName>T1 DB Managers\SqlGenerator.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Radar.Radar.DBConnector">
+    <Position X="9.5" Y="7.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAACACAgAAAAAAABhAASAAAAAAICAACBAAAAA=</HashCode>
+      <FileName>T1 DB Managers\DBConnector.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Radar.Radar.DBOperations">
+    <Position X="9.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIQAACABAAABAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>T1 DB Managers\DBOperations.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Radar.Radar.Project">
+    <Position X="6.75" Y="3" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAIBADAAgAggAgIAAAQAAAAAAAAgBEMEAAAAIEAAAKA=</HashCode>
+      <FileName>T2 Logic\Projects\Project.vb</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Radar.Radar.Costs">
+    <Position X="4.5" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>gAAAAgEIAAAAAAAAAAAAAAAgAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>T2 Logic\Projects\Project.vb</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Radar.Radar.Team">
+    <Position X="1.5" Y="7.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AgAACQAQCAAAAAAAABAYBQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>T2 Logic\Projects\Team.vb</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
