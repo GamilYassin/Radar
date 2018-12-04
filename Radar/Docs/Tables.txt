@@ -1,0 +1,24 @@
+﻿
+
+Projects_Table
+        Project_ID
+        SAP_Def
+        Plant_ID
+        Team_ID
+        Opp_ID
+        Status
+        Title
+        EPC
+        SubCon
+
+Projects_Table
+	     Team_ID 
+         Team_Sales 
+         Team_ComOps 
+         Team_PM 
+         Team_PE 
+         Team_HMI 
+         Team_Controls 
+         Team_Electrical 
+         Team_Mechanical 
+         Team_DCS 

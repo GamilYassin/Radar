@@ -4,6 +4,7 @@ Imports Radar
 
 Namespace Radar
     Public Class DBConnector
+        Implements IDisposable
 
         Private ConnectionString As String
         Private DataSource As String
@@ -127,6 +128,10 @@ Namespace Radar
             Me.DBConnection.Dispose()
             Me.DBCommand.Dispose()
             Me.Dispose()
+        End Sub
+
+        Private Sub IDisposable_Dispose() Implements IDisposable.Dispose
+            Throw New NotImplementedException()
         End Sub
     End Class
 

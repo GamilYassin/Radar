@@ -14,7 +14,7 @@ Namespace Radar
         Public Project_Total_Rev As Single
         Public Project_Total_Cost As Costs
 
-        Public Shared Project_ID_Name As String = "ID"
+        Public Shared Project_ID_Name As String = "Project_ID"
         Public Shared Project_SAP_Def_Name As String = "SAP_Def"
         Public Shared Project_Plant_ID_Name As String = "Plant_ID"
         Public Shared Project_Team_ID_Name As String = "Team_ID"

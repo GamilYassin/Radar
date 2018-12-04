@@ -151,5 +151,11 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TextParser\TextParser.vbproj">
+      <Project>{c1a11b72-4d3a-4dfa-bb5f-e2c8118449d5}</Project>
+      <Name>TextParser</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
