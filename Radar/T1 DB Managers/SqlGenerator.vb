@@ -478,7 +478,34 @@ Namespace Radar
             SQL_REAL
             SQL_DATE
         End Enum
+
+        Public Shared Function GetSqlDataType(colType As SQLDataTypesEnum) As String
+            Dim Result As String = ""
+            Select Case colType
+                Case SQLDataTypesEnum.SQL_BOOLEAN
+                    Result = "BOOLEAN"
+                Case SQLDataTypesEnum.SQL_DATE
+                    Result = "DATE"
+                Case SQLDataTypesEnum.SQL_INTEGER
+                    Result = "INTEGER"
+                Case SQLDataTypesEnum.SQL_REAL
+                    Result = "REAL"
+                Case SQLDataTypesEnum.VARCHAR_100
+                    Result = "VARCHAR (100)"
+                Case SQLDataTypesEnum.VARCHAR_1000
+                    Result = "VARCHAR (1000)"
+                Case SQLDataTypesEnum.VARCHAR_200
+                    Result = "VARCHAR (200)"
+                Case SQLDataTypesEnum.VARCHAR_50
+                    Result = "VARCHAR (50)"
+                Case SQLDataTypesEnum.VARCHAR_500
+                    Result = "VARCHAR (500)"
+            End Select
+
+            Return Result
+        End Function
 #End Region
+
     End Class
 
 

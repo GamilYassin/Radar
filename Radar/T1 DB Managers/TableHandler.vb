@@ -7,7 +7,7 @@ Namespace Radar
     Public MustInherit Class TableHandler
 
         Private Name As String
-        Private ColumnsCount As Integer
+        'Private ColumnsCount As Integer
         Private RowsCount As Integer
         Private ColumnsHeaders As List(Of String)
         Private ColumnsTypes As List(Of SqlGenerator.SQLDataTypesEnum)
@@ -17,10 +17,9 @@ Namespace Radar
 
 
         Public Sub New()
-            ColumnsCount = 0
             RowsCount = 0
             ColumnsHeaders = New List(Of String)
-            'ViewsStatments = New List(Of Integer)
+            ColumnsTypes = New List(Of SqlGenerator.SQLDataTypesEnum)
             dbConnector = New DBConnector()
             MyTable = New DataTable()
         End Sub
@@ -38,7 +37,7 @@ Namespace Radar
 
         Public ReadOnly Property GetColumnsCount() As Integer
             Get
-                Return Me.ColumnsCount
+                Return Me.ColumnsHeaders.Count
             End Get
         End Property
 
@@ -76,11 +75,9 @@ Namespace Radar
         End Function
 
         Public Function AddColumn(ColName As String, ColType As SqlGenerator.SQLDataTypesEnum, Optional IsPKCol As Boolean = False) As FunR
-            Me.ColumnsCount += 1
             Me.ColumnsHeaders.Add(ColName)
             Me.ColumnsTypes.Add(ColType)
-            Dim cmdString As String = SqlGenerator.InsertNewColum(Me.Name, ColName, ColType)
-
+            Dim cmdString As String = SqlGenerator.InsertNewColum(Me.Name, ColName, SqlGenerator.GetSqlDataType(ColType))
             Try
                 If IsPKCol Then Me.SetPKColumnName(ColName)
                 Return dbConnector.ExecuteCommands(cmdString)
@@ -94,7 +91,6 @@ Namespace Radar
             Dim ColIndex As Integer
             Dim cmdString As String
 
-            Me.ColumnsCount -= 1
             ColIndex = Me.ColumnsHeaders.IndexOf(ColName)
             Me.ColumnsHeaders.RemoveAt(ColIndex)
             Me.ColumnsTypes.RemoveAt(ColIndex)
@@ -112,7 +108,6 @@ Namespace Radar
             Dim cmdString As String
             Dim ColName As String
 
-            Me.ColumnsCount -= 1
             ColName = Me.ColumnsHeaders(ColIndex)
             Me.ColumnsHeaders.RemoveAt(ColIndex)
             Me.ColumnsTypes.RemoveAt(ColIndex)
@@ -129,7 +124,7 @@ Namespace Radar
         Public Function AddNewRow(Values() As String) As FunR
             ' Validate
             If Values.Count <> Me.ColumnsHeaders.Count Then
-                MsgBox("Error 1: Passed Values not equal Columns at Table")
+                MsgBox("Error 1: Passed Values not equal Columns at Table: " & Me.Name)
                 Return FunR.Exception
             End If
 
@@ -138,7 +133,7 @@ Namespace Radar
             Dim Counter As Integer
 
             Try
-                For Counter = 0 To Me.ColumnsCount - 1
+                For Counter = 0 To Me.ColumnsHeaders.Count - 1
                     cmdString = SqlGenerator.InsertIntoStatment(Me.Name, Me.ColumnsHeaders(Counter), Values(Counter))
                     dbConnector.ExecuteCommands(cmdString)
                 Next
@@ -225,7 +220,6 @@ Namespace Radar
         ''' <returns></returns>
         Public Function ValidateTableInfo() As FunR
             Me.FillTable()
-            Me.ColumnsCount = MyTable.Columns.Count
             Me.RowsCount = MyTable.Rows.Count
             Me.ColumnsHeaders.Clear()
             'ToDo: Add logic for column data types verification
@@ -237,8 +231,6 @@ Namespace Radar
             Return FunR.Exception
         End Function
     End Class
-
-
 
 End Namespace
 
