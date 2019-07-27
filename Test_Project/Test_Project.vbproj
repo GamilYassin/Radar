@@ -89,7 +89,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TestClass.vb" />
     <Compile Include="Test_Form.vb">
       <SubType>Form</SubType>
     </Compile>

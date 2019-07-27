@@ -146,10 +146,6 @@
     <Content Include="Docs\Project_Outline.txt" />
     <Content Include="Docs\Tables.txt" />
     <Content Include="T0 DataBase\LocalStore.txt" />
-    <None Include="T0 DataBase\Radar_log.ldf">
-      <DependentUpon>Radar.mdf</DependentUpon>
-    </None>
-    <None Include="T0 DataBase\Radar.mdf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="T3 GUI\" />
