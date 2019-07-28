@@ -10,8 +10,8 @@ Namespace TextParser
 
         Public Sub New(FileLocation As String)
             Me.FileLocation = FileLocation
-            Me.DelimeterStartChar = "["
-            Me.DelimeterEndChar = "]"
+            Me.DelimeterStartChar = "~"
+            Me.DelimeterEndChar = "~"
         End Sub
 
         Public ReadOnly Property IsFileExisit() As Boolean
