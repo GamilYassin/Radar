@@ -69,7 +69,7 @@ End Enum
     ''' </summary>
     Public Class CsvFileReader
         Inherits CsvFileCommon
-    'Implements IDisposable
+    Implements IDisposable
 
     ' Private members
     Private Reader As StreamReader
@@ -300,11 +300,11 @@ ReadNextLine:
             Return String.Empty
         End Function
 
-        ' Propagate Dispose to StreamReader
-        Public Sub Dispose()
-            Me.Reader.Dispose()
-        End Sub
-    End Class
+    ' Propagate Dispose to StreamReader
+    Public Sub Dispose() Implements IDisposable.Dispose
+        Me.Reader.Dispose()
+    End Sub
+End Class
 
     ''' <summary>
     ''' Class for writing to comma-separated-value (CSV) files.
