@@ -149,6 +149,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Radar\Radar.vbproj">
+      <Project>{51375afa-2d57-4022-aab7-b24d89a030c2}</Project>
+      <Name>Radar</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TextParser\TextParser.vbproj">
       <Project>{c1a11b72-4d3a-4dfa-bb5f-e2c8118449d5}</Project>
       <Name>TextParser</Name>
