@@ -407,6 +407,8 @@ Public Class TextDataBase
         'End If
 
         'Return Rows_deleted
+
+        Return 0
     End Function
 
 
